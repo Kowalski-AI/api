@@ -1,0 +1,23 @@
+
+# curl -X POST http://localhost:8080/analyze-pr
+#-H "X-API-Key: your_api_key_here"
+#-H "Content-Type: application/json"
+#-d '{
+#    "owner": "username",
+#    "repo": "repository",
+#    "pr_number": 123,
+#    "model_type": "openai"
+#}'
+POST http://localhost:8080/analyze-pr
+X-API-Key: your_api_key_here
+Content-Type: application/json
+
+{
+  "owner": "username",
+  "repo": "repository",
+  "pr_number": 123,
+  "model_type": "openai"
+}
+
+###
+
