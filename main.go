@@ -50,6 +50,7 @@ func loadConfig() (*Config, error) {
 func validateAPIKey(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		apiKey := r.Header.Get("X-API-Key")
+		log.Printf("API key: %s", apiKey)
 		config, err := loadConfig()
 		if err != nil {
 			http.Error(w, "Internal server error", http.StatusInternalServerError)
